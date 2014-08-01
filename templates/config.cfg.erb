@@ -1,0 +1,6 @@
+# This file is managed by Puppet class <%= @class %>::<%= @name %>
+
+define <%= @name %> {
+  <% @merged_options.sort.each do |key,value| %>
+  <%= key %>  <%= value %><% end %>
+}
