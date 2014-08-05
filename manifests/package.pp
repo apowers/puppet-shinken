@@ -14,5 +14,6 @@ class shinken::package (
   package { $package_name:
     ensure   => $ensure,
     provider => 'pip',
-  }
+  } ~>
+  exec { 'shinken-init': command => '/usr/bin/shinken --init' }
 }
