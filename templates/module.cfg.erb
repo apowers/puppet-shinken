@@ -1,7 +1,7 @@
-# This file is managed by Puppet class shinken::module
+# This file is managed by Puppet class shinken::config::module
 define module {
   module_name <%= @name %>
-  module_type <%= @type %>
+  module_type <%= @module_type %>
   <% @options.sort.each do |key,value| %>
   <%= key %>  <%= value %><% end %>
 }
